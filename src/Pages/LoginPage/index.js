@@ -2,14 +2,14 @@ import * as React from 'react';
 //import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
-import { Box } from './styled'
+import { div } from './styled'
 
 
 
 export function LoginPage() {
 
     return (
-        <div>
+        <div className='Container'>
 
             <TextField
                 name={"email"}

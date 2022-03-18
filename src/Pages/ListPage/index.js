@@ -1,7 +1,5 @@
 export function ListPage() {
     return (
-        <div>
-            Lstagem
-        </div>
+        <h1>ListPage</h1>
     )
 }

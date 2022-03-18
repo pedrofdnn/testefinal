@@ -21,7 +21,5 @@ export const LogoImage = styled.img`
   width: 35vw;
   max-width: 350px;
 `
-export const TextField = styled.div`
-  
-`
+
 

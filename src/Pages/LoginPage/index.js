@@ -4,11 +4,20 @@ import { LogoImage, ScreenContainer, InputsContainer } from './styled'
 import logo from '../../Assets/logo.png'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
-import { Clear, Password } from '@mui/icons-material'
-export function LoginPage() {
-    //const [form, onChange, clear] = useForm(email: "", Password: "")
-    const onSubmitForm = () => {
+import CircularProgress from '@material-ui/core/CircularProgress'
+import { useState } from 'react'
+import { goToNewUsers } from '../../Router/Coordinator'
 
+
+export function LoginPage() {
+
+    //const [form, onChange, clear] = useForm(email: , Password: )
+
+
+
+    const [isLoading, setIsLoading] = useState(false)
+    const onSubmitForm = (event) => {
+        event.prevent()
     }
 
     return (
@@ -18,8 +27,8 @@ export function LoginPage() {
                 <form onSubmitForm={onSubmitForm}>
                     <TextField
                         name={"email"}
-                        //value={form.email}
-                        //onChange={onChange}
+                        // value={form.email}
+                        // onChange={onChange}
                         label={"E-mail"}
                         variant={"outlined"}
                         fullWidth
@@ -29,8 +38,8 @@ export function LoginPage() {
                     />
                     <TextField
                         name={"password"}
-                        //value={form.password}
-                        //onChange={onChange}
+                        // value={form.password}
+                        // onChange={onChange}
                         label={"Senha"}
                         variant={"outlined"}
                         fullWidth
@@ -44,14 +53,20 @@ export function LoginPage() {
                         variant={"contained"}
                         color={"primary"}
                     >
-                        Fazer Login
+                       {isLoading ? <CircularProgress size={24}/> : <>Fazer Login</>}
                     </Button>
 
-
+                    <Button
+                        //onClick={() => goToNewUsers(history)}
+                        type={"submit"}
+                        fullWidth
+                        variant={"text"}
+                    >
+                        Não possui conta? Cadastre-se
+                    </Button>
                 </form>
-
             </InputsContainer>
-
         </ScreenContainer>
     )
 }
+

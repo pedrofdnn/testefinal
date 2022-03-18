@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { useState } from 'react'
-import { goToNewUsers } from '../../Router/Coordinator'
 
 
 export function LoginPage() {
@@ -35,6 +34,7 @@ export function LoginPage() {
                         margin={"normal"}
                         required
                         type={"email"}
+                        
                     />
                     <TextField
                         name={"password"}

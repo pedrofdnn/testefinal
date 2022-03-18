@@ -1,11 +1,11 @@
-export const goToLoginPage = (history) => {
+export const ToLoginPage = (history) => {
     history.push("/")
 }
 
-export const goToNewUsers = (history) => {
+export const ToNewUsers = (history) => {
     history.push("/NewUsers")
 }
 
-export const goToListPage = (history) => {
+export const ToListPage = (history) => {
     history.push("/ListPage")
 }

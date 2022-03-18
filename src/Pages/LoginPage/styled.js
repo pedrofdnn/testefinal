@@ -4,8 +4,9 @@ export const ScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;  
-  margin-top: 0vh;
-  padding: 10vh  
+  margin-top: 10vh;
+  padding: vh  
+
 `
 
 export const InputsContainer = styled.div`
@@ -14,7 +15,15 @@ export const InputsContainer = styled.div`
   width: 80vw;
   max-width: 450px;
   align-items: center;
-  margin-bottom: 20px; 
+  margin-bottom: px; 
+`
+export const SignUpButtonContainer = styled.div`
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: vh;
+ width: 80vw;
+ max-width: 450px;
 `
 
 export const LogoImage = styled.img`
